@@ -9,15 +9,15 @@
 }
 
 html {
-  background-color: #111;
-  background-image: url(../img/background.jpg);
-  background-size: 100%;
   font-family: Helvetica, Arial;
   /*font-weight: light;*/
   font-size: 12px;
 }
 
 body {
+  background-size: 100%;
+  background-color: #111;
+  background-image: url(../img/background.jpg);
   margin-top: 5rem;
 }
 
@@ -182,11 +182,17 @@ footer ul li {
 
 }
 
-@media(max-width: 750px) {
+@media(max-width: 767px) {
   .poster-wrapper h2 {
     font-size: 3rem;
   }
   .poster-wrapper {
     width: 100%;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #666;
   }
 }
