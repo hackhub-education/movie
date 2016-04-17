@@ -89,6 +89,7 @@ input, select, textarea, button[type="submit"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%);
+  margin: 0;
 }
 
 .poster-wrapper img:hover {
@@ -172,4 +173,20 @@ footer ul li {
 
 .contact-form {
   text-align: center;
+}
+
+@media(max-width: 1120px) {
+  .poster-wrapper h2 {
+    font-size: 2rem;
+  }
+
+}
+
+@media(max-width: 750px) {
+  .poster-wrapper h2 {
+    font-size: 3rem;
+  }
+  .poster-wrapper {
+    width: 100%;
+  }
 }
