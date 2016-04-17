@@ -1,3 +1,9 @@
+@font-face {
+    font-family: fantasyFont;
+    src: url(../fonts/Demo_ConeriaScript.ttf);
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +12,7 @@ html {
   background-color: #111;
   background-image: url(../img/background.jpg);
   background-size: 100%;
-  font-family: Arial;
+  font-family: Helvetica, Arial;
   /*font-weight: light;*/
   font-size: 12px;
 }
@@ -19,6 +25,7 @@ h1 {
   text-align: center;
   color: white;
   padding-top: 2rem;
+  font-family: 'fantasyFont', 'Lobster', cursive;
 }
 
 button {
@@ -27,8 +34,18 @@ button {
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 5px;
-  transition: .5s ease-in all;
+  transition: .5s ease-in background-color;
   cursor: pointer;
+}
+
+input, select, textarea, button[type="submit"] {
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  /*width: 40%;*/
+  min-width: 400px;
 }
 
 .btn-blue {
@@ -37,6 +54,10 @@ button {
 
 .btn-blue:hover {
   background-color: #2192D1;
+}
+
+.margin-right {
+  margin-right: 1rem;
 }
 
 .poster-wrapper {
@@ -97,7 +118,7 @@ nav ul li {
   margin-right: 1rem;
   /*border-radius: 5px;*/
   cursor: pointer;
-  transition: .3s linear all;
+  transition: .3s linear background-color;
 }
 
 nav ul li:hover {
@@ -147,4 +168,8 @@ footer ul li {
   display: inline-block;
   color: white;
   margin: 0 1rem;
+}
+
+.contact-form {
+  text-align: center;
 }
