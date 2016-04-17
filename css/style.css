@@ -175,11 +175,17 @@ footer ul li {
   text-align: center;
 }
 
+
+.navbar-brand {
+  width: 64px;
+  padding-top: 10px;
+}
+
+
 @media(max-width: 1120px) {
   .poster-wrapper h2 {
     font-size: 2rem;
   }
-
 }
 
 @media(max-width: 767px) {
