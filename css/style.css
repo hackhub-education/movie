@@ -24,7 +24,7 @@ body {
 h1 {
   text-align: center;
   color: white;
-  padding-top: 2rem;
+  padding-top: 3rem;
   font-family: 'fantasyFont', 'Lobster', cursive;
 }
 
@@ -38,14 +38,20 @@ button {
   cursor: pointer;
 }
 
-input, select, textarea, button[type="submit"] {
+/*input, select, textarea, button[type="submit"] {
   font-size: 1.25rem;
   padding: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
-  /*width: 40%;*/
   min-width: 400px;
+}*/
+
+.contact-form {
+  min-width: 400px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-blue {
@@ -54,6 +60,18 @@ input, select, textarea, button[type="submit"] {
 
 .btn-blue:hover {
   background-color: #2192D1;
+}
+
+.txt-white {
+  color: white;
+}
+
+.container-s {
+  max-width: 500px;
+}
+
+.full-width {
+  width: 100%
 }
 
 .margin-right {
@@ -179,6 +197,10 @@ footer ul li {
 .navbar-brand {
   width: 64px;
   padding-top: 10px;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: rgba(255,255,255,0.2);
 }
 
 
