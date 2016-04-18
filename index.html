@@ -92,17 +92,17 @@
   <div class="poster-section">
 
     <div class="poster-wrapper">
-      <a href=""><img src="img/movie-poster-0.jpg" alt="Avengers Movie"></a>
+      <a href="#" data-toggle="modal" data-target="#avengersposter"><img src="img/movie-poster-0.jpg" alt="Avengers Movie"></a>
       <h2>Avengers</h2>
     </div>
 
     <div class="poster-wrapper">
-      <a href=""><img src="img/movie-poster-1.jpg" alt="Star Wars Movie"></a>
+      <a href="" data-toggle="modal" data-target="#starwarposter"><img src="img/movie-poster-1.jpg" alt="Star Wars Movie"></a>
       <h2>Start Wars</h2>
     </div>
 
     <div class="poster-wrapper">
-      <a href=""><img src="img/movie-poster-2.jpg" alt="Titanic Movie"></a>
+      <a href="" data-toggle="modal" data-target="#titanicposter"><img src="img/movie-poster-2.jpg" alt="Titanic Movie"></a>
       <h2>Titanic</h2>
     </div>
   </div>
@@ -116,6 +116,58 @@
     </ul>
 
   </footer>
+
+
+  <div class="modal fade" id="avengersposter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Avengers</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/movie-poster-0.jpg" alt="Avengers Movie">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="starwarposter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Start Wars</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/movie-poster-1.jpg" alt="Avengers Movie">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="titanicposter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Titanic</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/movie-poster-2.jpg" alt="Avengers Movie">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
