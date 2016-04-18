@@ -34,20 +34,21 @@
 
   <form action="" class="contact-form">
     <h1>Contact Us</h1>
-    <input name="username" type="text" placeholder="Name" required>
+    <input class="form-control" name="username" type="text" placeholder="Name" required>
     <br>
-    <input name="email" type="email" placeholder="Email" required>
+    <input class="form-control" name="email" type="email" placeholder="Email" required>
     <br>
-    <select name="type">
+    <select class="form-control" name="type">
       <option value="inquiry">General Inquiry</option>
       <option value="career">Job Opportunity</option>
       <option value="feedback">User Feedback</option>
     </select>
     <br>
-    <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+    <textarea class="form-control" name="message" cols="30" rows="10" placeholder="Message"></textarea>
     <br>
-    <button type="submit" class="btn-blue">Submit</button>
+    <button type="submit" class="btn-blue full-width">Submit</button>
   </form>
+
   <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
