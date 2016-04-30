@@ -11,7 +11,7 @@ var movies = [
     name: 'Start Wars',
     price: 12,
     avaliable: true,
-    ticketLeft: 0
+    ticketLeft: 2
   },
   {
     date: '1998-05-02',
@@ -23,11 +23,29 @@ var movies = [
 ];
 
 for (var i = 0; i < movies.length; i++) {
-  if (movies[i].avaliable || movies[i].ticketLeft > 0) {
-    console.log(movies[i].name);
+
+
+  var dateTd = '<td>' + movies[i].date + '</td>';
+  var nameTd = '<td>' + movies[i].name + '</td>';
+  var priceTd = '<td>' + movies[i].price + '</td>';
+
+  if (movies[i].avaliable && movies[i].ticketLeft > 0) {
+
+    // movie is avaliable and has ticket left, user can purchase
+
+    var purchaseTd = '<td><button class="btn btn-primary">Purchase</button></td>';
   } else {
-    console.log('not avaliable');
+
+    // movie is not avaliable and user cannot purchase
+
+    var purchaseTd = '<td><button class="btn" disabled="true">Not Avaliable</button></td>';
   }
+
+
+  
+
+  $('<tr>').html(dateTd + nameTd + priceTd + purchaseTd).appendTo('#ticket-table');
+
 }
 
 
