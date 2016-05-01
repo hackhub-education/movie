@@ -203,6 +203,11 @@ footer ul li {
     background-color: rgba(255,255,255,0.2);
 }
 
+.form-control.has-error {
+  border: 1px #f01511 solid;
+  background-color: #ffbbbb;
+}
+
 
 @media(max-width: 1120px) {
   .poster-wrapper h2 {
