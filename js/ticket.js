@@ -35,7 +35,8 @@ var movies;
 //   }
 // ];
 
-var movieDB = new Firebase('https://burning-inferno-1270.firebaseio.com/');
+var movieDB = new Firebase('https://burning-inferno-1270.firebaseio.com/movies');
+var usersDB = new Firebase('https://burning-inferno-1270.firebaseio.com/users');
 
 // movieDB.set({
 //   movies: movies,
@@ -44,7 +45,7 @@ var movieDB = new Firebase('https://burning-inferno-1270.firebaseio.com/');
 
 movieDB.on('value', function(snapshot) {
   $('.movie-row').remove();
-  movies = snapshot.val().movies;
+  movies = snapshot.val();
 
   for (var i = 0; i < movies.length; i++) {
     var dateTd = '<td>' + movies[i].date + '</td>';
@@ -60,10 +61,7 @@ movieDB.on('value', function(snapshot) {
     }
     $('<tr>').addClass('movie-row').html(dateTd + nameTd + priceTd + purchaseTd + ticketTd).appendTo('#ticket-table');
   }
-
 });
-
-// debugger;
 
 $('#ticket-table').on('click', '.btn-purchase', function(e) {
 
@@ -102,5 +100,7 @@ $('#btn-reserve').click(function(e) {
     }
   }
 
-  movieDB.update({movies: movies});
+  movieDB.set(movies);
+  usersDB.push(reservation);
+
 });
