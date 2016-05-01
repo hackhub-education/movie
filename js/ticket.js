@@ -1,4 +1,6 @@
-// var movies = [
+var movies;
+
+// movies = [
 //   {
 //     id: 'm0',
 //     date: '2015-10-25',
@@ -33,21 +35,16 @@
 //   }
 // ];
 
-var movies;
-
-
 var movieDB = new Firebase('https://burning-inferno-1270.firebaseio.com/');
 
-// movieDB.set(movies);
+// movieDB.set({
+//   movies: movies,
+//   user: []
+// });
 
 movieDB.on('value', function(snapshot) {
-
-  console.log(snapshot.val());
-
   $('.movie-row').remove();
-
-  movies = snapshot.val();
-
+  movies = snapshot.val().movies;
 
   for (var i = 0; i < movies.length; i++) {
     var dateTd = '<td>' + movies[i].date + '</td>';
@@ -66,7 +63,9 @@ movieDB.on('value', function(snapshot) {
 
 });
 
-$('.btn-purchase').click(function(e) {
+// debugger;
+
+$('#ticket-table').on('click', '.btn-purchase', function(e) {
 
   $('input[name="name"]').val('');
   $('input[name="email"]').val('');
@@ -75,31 +74,33 @@ $('.btn-purchase').click(function(e) {
   for (var i = 0; i < movies.length; i++) {
     if (movies[i].id === e.target.id) {
       if (movies[i].ticketLeft > 0) {
-        // movies[i].ticketLeft--;
         $('.movie-name').text(movies[i].name);
         $('input[name="movie-id"]').val(movies[i].id);
-
         $('#user-info').modal('show');
-        $('#t' + movies[i].id).text(movies[i].ticketLeft);
       } 
-      if (movies[i].ticketLeft < 1) {
-        // $(e.target).text('Not Avaliable').css({
-        //   'background-color': '#ccc',
-        //   'cursor': 'default'
-        // });
-        $(e.target).text('Not Avaliable').removeClass('btn-primary btn-purchase').prop('disabled', true);
-      }
     }
   }
 });
 
 $('#btn-reserve').click(function(e) {
-
   var reservation = {
     name: $('input[name="name"]').val(),
     email: $('input[name="email"]').val(),
     phone: $('input[name="phone"]').val(),
     movieId: $('input[name="movie-id"]').val(),
   };
-  console.log(reservation);
+  for (var i = 0; i < movies.length; i++) {
+    if (movies[i].id === reservation.movieId) {
+      if (movies[i].ticketLeft > 0) {
+        movies[i].ticketLeft--;
+        $('#user-info').modal('hide');
+        // $('#t' + movies[i].id).text(movies[i].ticketLeft);
+      }
+      // if (movies[i].ticketLeft < 1) {
+      //   $(e.target).text('Not Avaliable').removeClass('btn-primary btn-purchase').prop('disabled', true);
+      // }
+    }
+  }
+
+  movieDB.update({movies: movies});
 });
