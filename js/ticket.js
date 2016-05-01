@@ -49,10 +49,19 @@ for (var i = 0; i < movies.length; i++) {
 }
 
 $('.btn-purchase').click(function(e) {
+
+  $('input[name="name"]').val('');
+  $('input[name="email"]').val('');
+  $('input[name="phone"]').val('');
+
   for (var i = 0; i < movies.length; i++) {
     if (movies[i].id === e.target.id) {
       if (movies[i].ticketLeft > 0) {
-        movies[i].ticketLeft--;
+        // movies[i].ticketLeft--;
+        $('.movie-name').text(movies[i].name);
+        $('input[name="movie-id"]').val(movies[i].id);
+
+        $('#user-info').modal('show');
         $('#t' + movies[i].id).text(movies[i].ticketLeft);
       } 
       if (movies[i].ticketLeft < 1) {
@@ -64,4 +73,15 @@ $('.btn-purchase').click(function(e) {
       }
     }
   }
+});
+
+$('#btn-reserve').click(function(e) {
+
+  var reservation = {
+    name: $('input[name="name"]').val(),
+    email: $('input[name="email"]').val(),
+    phone: $('input[name="phone"]').val(),
+    movieId: $('input[name="movie-id"]').val(),
+  };
+  console.log(reservation);
 });

@@ -67,6 +67,33 @@
 
     </table>
   </div>
+
+
+  <div class="modal fade" id="user-info" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Purchase Ticket</h4>
+        </div>
+        <div class="modal-body">
+          <h1 class="movie-name"></h1>
+          <p>You are purchasing <span class="movie-name"></span></p>
+          <form id="purchase-form">
+            <input class="form-control" type="text" name="name" placeholder="Full Name">
+            <input class="form-control" type="email" name="email" placeholder="Email">
+            <input class="form-control" type="tel" name="phone" placeholder="Phone Number">
+            <input type="hidden" name="movie-id">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btn-reserve">Reserve</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
 

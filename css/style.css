@@ -208,6 +208,15 @@ footer ul li {
   background-color: #ffbbbb;
 }
 
+#purchase-form .form-control {
+  margin: 1rem 0;
+}
+
+.movie-name {
+  color: black;
+  padding: 0;
+}
+
 
 @media(max-width: 1120px) {
   .poster-wrapper h2 {
