@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <title>Login/Signup</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -26,30 +26,25 @@
         <a href="index.html"><li>Home</li></a>
         <a href="ticket.html"><li>Ticket</li></a>
         <a href="about.html"><li>About</li></a>
-        <a href="contact.html"><li>Contact Us</li></a>
       </ul>
     </div>
   </div>
 </nav>
 
   <form action="" class="contact-form">
-    <h1>Contact Us</h1>
-    <input class="form-control" name="username" type="text" placeholder="Name" required>
+    <h1>Welcome</h1>
+    <input class="form-control" id="username"name="username" type="text" placeholder="User Name" required>
     <br>
-    <input class="form-control" name="email" type="email" placeholder="Email" required>
+    <input class="form-control" id="password"name="email" type="password" placeholder="Password" required>
     <br>
-    <select class="form-control" name="type">
-      <option value="inquiry">General Inquiry</option>
-      <option value="career">Job Opportunity</option>
-      <option value="feedback">User Feedback</option>
-    </select>
-    <br>
-    <textarea class="form-control" name="message" cols="30" rows="10" placeholder="Message"></textarea>
-    <br>
-    <button type="submit" class="btn-blue full-width">Submit</button>
+    <button type="button" id="loginBtn" class="btn-blue full-width">Login</button>
+
+    <div>No account?<div>
+    <button type="button" id="signupBtn" class="btn-blue full-width">Signup</button>
   </form>
 
   <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
