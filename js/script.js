@@ -147,7 +147,7 @@ $(document).ready(function() {
         deleteCookie('x-access-token');
         deleteCookie('cartModel');
         token = null;
-        window.location.href = "/movie/index.html";
+        window.location.href = "/index.html";
     });
 
     $("#loginBtn").click(function(event){
@@ -164,7 +164,7 @@ $(document).ready(function() {
                     if (res.success) {
                         var cookie = 'x-access-token=' + res.token;
                         document.cookie = cookie;
-                        window.location.href = "/movie/index.html";
+                        window.location.href = "/index.html";
                     } else {
                         alert(res.message);
                     }
